@@ -1,0 +1,31 @@
+##I/O port listed below are used for Year 2 CAD project
+## Pins used include: 1.clk, 2.clear (button), 3.reset (button), 4.4 LEDs to indicate process, 5.tx and rx
+
+##Clock signal
+Net "clk" LOC=V10 | IOSTANDARD=LVTTL;
+Net "clk" TNM_NET = sys_clk_pin;
+TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 100000 kHz;
+
+## Usb-RS232 interface
+Net "rxdata" LOC = N17 | IOSTANDARD=LVTTL; #Bank = 1, pin name = IO_L48P_HDC_M1DQ8, Sch name = MCU-RX
+Net "txdata" LOC = N18 | IOSTANDARD=LVTTL; #Bank = 1, pin name = IO_L48N_M1DQ9, Sch name = MCU-TX
+
+## Buttons
+#Commented#Net "clear" LOC = C9 | IOSTANDARD = LVTTL; #Bank = 0, pin name = IO_L33P, Sch name = BTNS
+Net "reset" LOC = A8 | IOSTANDARD = LVTTL; #Bank = 0, pin name = IO_L33N, Sch name = BTNU
+#Net "setGreen" LOC = D9 | IOSTANDARD = LVTTL; #Bank = 0, pin name = IO_L33P, Sch name = BTNS
+#Net "setUnderline" LOC = B8 | IOSTANDARD = LVTTL; #Bank = 0, pin name = IO_L33N, Sch name = BTNU
+#Net "clearFormat" LOC = C4 | IOSTANDARD = LVTTL; #Bank = 0, pin name = IO_L33N, Sch name = BTNU
+#
+### slide switch
+#Net "mode" LOC = T10 | IOSTANDARD = LVTTL; #Bank = 0, pin name = IO_L33N, Sch name = BTNU
+
+## Leds
+####Net "Led<0>" LOC = U16 | IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L2P_CMPCLK, Sch name = LD0
+####Net "Led<1>" LOC = V16 |  IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L2N_CMPMOSI, Sch name = LD1
+####Net "Led<2>" LOC = U15 |  IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L5P, Sch name = LD2
+####Net "Led<3>" LOC = V15 |  IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L5N, Sch name = LD3
+####Net "Led<4>" LOC = M11 |  IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L15P, Sch name = LD4
+####Net "Led<5>" LOC = N11 |  IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L15N, Sch name = LD5
+####Net "Led<6>" LOC = R11 |  IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L16P, Sch name = LD6
+####Net "Led<7>" LOC = T11 |  IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L16N_VREF, Sch name = LD7
