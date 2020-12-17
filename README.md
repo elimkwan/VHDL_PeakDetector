@@ -1,5 +1,5 @@
 # VHDL_PeakDetector
-This is a group project with Trevor and Yasin. My main contribution is writing the DataProc.vhd.
+This is a group project with Trevor and Yasin. My main contribution is writing the DataProc.vhd. 
 
 
 ## Description: 
@@ -8,6 +8,12 @@ The peak detector will process a number of words as typed in by the user in the 
 ## Features
 - Data Processor: analyses certain number of bytes from the Data Generator and outputs the peak byte of the sequences; with the three bytes before and after the peak, as well as the index of the peak byte.
 - Command Processor: handle the command input by user.
+
+## Optimisations in the Data Processor
+- using mealy state machine
+- 2 state processor instead of 1
+- reduce number of states from 15 to 3
+- Results: Improve the run time by 5x
 
 ## How the full system looks like:
 Unfortunately the full system is not here, but that is how it would look like
