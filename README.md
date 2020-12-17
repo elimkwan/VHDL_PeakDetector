@@ -1,6 +1,5 @@
 # VHDL_PeakDetector
 This is a group project with Trevor and Yasin. My main contribution is writing the DataProc.vhd.
-Author: [Data Processor: Elim Kwan], [Command Processor: Trevor Leung, Yasin Abughrara]
 
 
 ## Description: 
